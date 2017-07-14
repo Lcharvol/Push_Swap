@@ -67,7 +67,7 @@ int  verif_intruction(char *str)
   return (1);
 }
 
-void stock_numbers(t_checker *c, int ac, char **av)
+void stock_numbers(t_pile *c, int ac, char **av)
 {
   int i;
 
@@ -79,7 +79,23 @@ void stock_numbers(t_checker *c, int ac, char **av)
   }
 }
 
-void run()
+void print_table(int *tab, int len) {
+  int i;
+
+  i = 0;
+  while (i < len)
+  {
+    ft_putnbr(tab[i]);
+    ft_putchar('\n');
+    i++;
+  }
+}
+
+void do_op(t_pile *p, char *line)
+{
+}
+
+void run(t_pile *p)
 {
   char *line;
 
@@ -87,19 +103,23 @@ void run()
   {
     if (verif_intruction(line) != 0)
       error();
+    do_op(p, line);
+    print_table(p->pilea, 4);
+    ft_putchar('\n');
+    print_table(p->pileb, 4);
   }
 }
 
 
 int main (int ac, char **av)
 {
-  t_checker *c;
+  t_pile *p;
 
-  c = (t_checker *)malloc(sizeof(*c));
-  c->pilea = (int *)malloc(sizeof(*(c->pilea)) * (ac - 1));
-  c->pileb = (int *)malloc(sizeof(*(c->pilea)) * (ac - 1));
+  p = (t_pile *)malloc(sizeof(*p));
+  p->pilea = (int *)malloc(sizeof(*(p->pilea)) * (ac - 1));
+  p->pileb = (int *)malloc(sizeof(*(p->pilea)) * (ac - 1));
   if (check_number(ac, av) != 0)
     error();
-  stock_numbers(c, ac, av);
-  run(c);
+  stock_numbers(p, ac, av);
+  run(p);
 }
