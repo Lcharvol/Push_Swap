@@ -1,22 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   tools.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lcharvol <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/07/14 16:42:03 by lcharvol          #+#    #+#             */
+/*   Updated: 2017/07/14 16:42:10 by lcharvol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../../includes/ft_push_swap.h"
 
-void init_pile(t_pile *p, int ac)
+void				init_pile(t_pile *p, int ac)
 {
-  p->pile_sizea = ac - 1;
+	p->pile_sizea = ac - 1;
 }
 
-void	ft_rr(t_pile *p)
+void				ft_rr(t_pile *p)
 {
 	ft_ra(p, 1);
 	ft_rb(p, 1);
 	ft_putstr("rr\n");
 }
 
-void error(void)
+void				error(void)
 {
-  ft_putendl("Error");
-  exit(0);
+	ft_putendl("Error");
+	exit(0);
 }
 
 long long int		ft_atoi_ll(const char *str)
