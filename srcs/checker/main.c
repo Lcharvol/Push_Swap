@@ -6,7 +6,7 @@
 /*   By: lcharvol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/30 03:53:10 by lcharvol          #+#    #+#             */
-/*   Updated: 2017/07/14 16:38:14 by lcharvol         ###   ########.fr       */
+/*   Updated: 2017/07/14 16:40:19 by lcharvol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int		check_number(int ac, char **av)
 void	stock_numbers(t_pile *c, int ac, char **av)
 {
 	int i;
-	
+
 	i = 0;
 	while (i < ac - 1)
 	{
@@ -62,7 +62,7 @@ void	stock_numbers(t_pile *c, int ac, char **av)
 void	issort(int *tab, int len)
 {
 	int i;
-	
+
 	i = 0;
 	while (i < len)
 	{
@@ -71,7 +71,7 @@ void	issort(int *tab, int len)
 			if (tab[i - 1] > tab[i])
 			{
 				ft_putendl("KO");
-				return;
+				return ;
 			}
 		}
 		i++;
@@ -79,7 +79,7 @@ void	issort(int *tab, int len)
 	ft_putendl("OK");
 }
 
-int		main (int ac, char **av)
+int		main(int ac, char **av)
 {
 	t_pile	*p;
 
