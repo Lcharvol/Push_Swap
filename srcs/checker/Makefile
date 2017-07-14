@@ -2,6 +2,9 @@ NAME = checker
 
 SRCS = 	main.c \
 				tools.c \
+				run.c \
+				../push_swap/ft_operations.c \
+				../push_swap/ft_operations2.c \
 
 INC = ../../includes/ft_push_swap.h
 

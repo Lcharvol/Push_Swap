@@ -1,6 +1,18 @@
 
 #include "../../includes/ft_push_swap.h"
 
+void init_pile(t_pile *p, int ac)
+{
+  p->pile_sizea = ac - 1;
+}
+
+void	ft_rr(t_pile *p)
+{
+	ft_ra(p, 1);
+	ft_rb(p, 1);
+	ft_putstr("rr\n");
+}
+
 void error(void)
 {
   ft_putendl("Error");

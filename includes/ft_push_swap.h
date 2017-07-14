@@ -17,12 +17,6 @@
 # include <stdio.h>
 # include "../libft/libft.h"
 
-typedef struct		s_checker
-{
-	int				*pilea;
-  int				*pileb;
-}					t_checker;
-
 typedef struct		s_pile
 {
 	int				*pilea;
@@ -35,6 +29,9 @@ typedef struct		s_pile
 	int				pile_sizeb;
 }					t_pile;
 
+void            init_pile(t_pile *p, int ac);
+void            run(t_pile *p);
+void            do_op(t_pile *p, char *line);
 void            error(void);
 long long int		ft_atoi_ll(const char *str);
 void	          ft_printpile(t_pile *p);
