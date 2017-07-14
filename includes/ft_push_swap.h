@@ -17,6 +17,12 @@
 # include <stdio.h>
 # include "../libft/libft.h"
 
+typedef struct		s_checker
+{
+	int				*pilea;
+  int				*pileb;
+}					t_checker;
+
 typedef struct		s_pile
 {
 	int				*pilea;
@@ -29,19 +35,20 @@ typedef struct		s_pile
 	int				pile_sizeb;
 }					t_pile;
 
+void            error(void);
 long long int		ft_atoi_ll(const char *str);
-void	ft_printpile(t_pile *p);
-void	ft_algo(t_pile *p);
-void	ft_rrr(t_pile *p);
-void	ft_rrb(t_pile *p, int b);
-void	ft_rra(t_pile *p, int b);
-void	ft_rr(t_pile *p);
-void	ft_rb(t_pile *p, int b);
-void	ft_ra(t_pile *p, int b);
-void	ft_ss(t_pile *p);
-void	ft_sb(t_pile *p, int b);
-void	ft_sa(t_pile *p, int b);
-void	ft_pb(t_pile *p);
-void	ft_pa(t_pile *p);
+void	          ft_printpile(t_pile *p);
+void	          ft_algo(t_pile *p);
+void	          ft_rrr(t_pile *p);
+void	          ft_rrb(t_pile *p, int b);
+void	          ft_rra(t_pile *p, int b);
+void	          ft_rr(t_pile *p);
+void	          ft_rb(t_pile *p, int b);
+void	          ft_ra(t_pile *p, int b);
+void	          ft_ss(t_pile *p);
+void	          ft_sb(t_pile *p, int b);
+void	          ft_sa(t_pile *p, int b);
+void	          ft_pb(t_pile *p);
+void	          ft_pa(t_pile *p);
 
 #endif

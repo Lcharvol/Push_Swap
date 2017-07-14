@@ -12,12 +12,6 @@
 
 #include "../../includes/ft_push_swap.h"
 
-void error(void)
-{
-  ft_putendl("Error");
-  exit(0);
-}
-
 int check_overflow(char *str)
 {
   if (str[0] == '-')
@@ -73,7 +67,19 @@ int  verif_intruction(char *str)
   return (1);
 }
 
-void run(/* arguments */)
+void stock_numbers(t_checker *c, int ac, char **av)
+{
+  int i;
+
+  i = 0;
+  while (i < ac - 1)
+  {
+    c->pilea[i] = ft_atoi(av[i + 1]);
+    i++;
+  }
+}
+
+void run()
 {
   char *line;
 
@@ -84,9 +90,16 @@ void run(/* arguments */)
   }
 }
 
+
 int main (int ac, char **av)
 {
+  t_checker *c;
+
+  c = (t_checker *)malloc(sizeof(*c));
+  c->pilea = (int *)malloc(sizeof(*(c->pilea)) * (ac - 1));
+  c->pileb = (int *)malloc(sizeof(*(c->pilea)) * (ac - 1));
   if (check_number(ac, av) != 0)
     error();
-  run();
+  stock_numbers(c, ac, av);
+  run(c);
 }

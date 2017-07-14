@@ -1,6 +1,12 @@
 
 #include "../../includes/ft_push_swap.h"
 
+void error(void)
+{
+  ft_putendl("Error");
+  exit(0);
+}
+
 long long int		ft_atoi_ll(const char *str)
 {
 	int				i;
